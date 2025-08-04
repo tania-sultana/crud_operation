@@ -20,6 +20,8 @@
                 @csrf
                     <div class="form-group">
                         <label for="">Name</label>
+                        <span>*</span>
+
                         <input type="text" class="form-control" name="name" placeholder="Enter your name">
                         @error('name')
                         <span class="text-danger">{{$message}}</span>
@@ -28,6 +30,7 @@
 
                     <div class="form-group">
                         <label for="">Email</label>
+                        <span>*</span>
                         <input type="text" class="form-control" name="email" placeholder="Enter your email">
                         @error('email')
                         <span class="text-danger">{{$message}}</span>
@@ -44,6 +47,7 @@
                     </div>
                      <div class="form-group">
                         <label for="">Phone Number</label>
+                        <span>*</span>
                         <input type="text" class="form-control" name="phone" placeholder="Enter your phone number">
                         @error('phone')
                         <span class="text-danger">{{$message}}</span>

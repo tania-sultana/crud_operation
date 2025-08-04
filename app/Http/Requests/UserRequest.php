@@ -21,17 +21,13 @@ class UserRequest extends FormRequest
      */
     public function rules(): array
     {
-
         return [
             'name' => 'required|max:10',
             'email' => 'required|email',
-
-
-
-
+            'phone' => 'required|numeric'
         ];
-
     }
+
     public function messages()
     {
           return[
@@ -39,9 +35,8 @@ class UserRequest extends FormRequest
             'name.max'=>'Your name can not contain more than 10 charecter',
             'email.required'=>'Enter your email',
             'email.email'=>'Email must be a valid eamil',
-
-
-
+            'phone.required'=>'Enter your phone number',
+            'phone.numeric'=>'Phone number must be number'
         ];
     }
 }
