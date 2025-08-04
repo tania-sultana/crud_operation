@@ -22,7 +22,7 @@
 
 
     <div class="container">
-        <a href="{{ url('/add-data') }}" class="btn btn-primary my-3">Add Data</a>
+        <a href="{{ route("crud.add") }}" class="btn btn-primary my-3">Add Data</a>
         @if (Session::has('msg'))
             <p class="alert alert-success">{{ Session::get('msg') }}</p>
         @endif
@@ -48,11 +48,11 @@
                         <td>{{ $data->address }}</td>
                         <td>{{ $data->phone }}</td>
                         <td>
-                            <a href="{{ url('/edit-data/' . $data->id) }}" class="btn btn-success">Edit</a>
+                            <a href="{{ route("crud.edit" , $data->id) }}" class="btn btn-success">Edit</a>
                             {{-- <a href="" class="btn btn-danger" --}}
                             {{-- onclick="return confirm('Are you sure to delete')">Delete</a> --}}
                             <button class="btn btn-danger"
-                                onclick='deleteConfirmationAlert("{{ url('/delete-data/' . $data->id) }}")'>Delete</button>
+                                onclick="deleteConfirmationAlert('{{ route("crud.delete",  $data->id) }}')">Delete</button>
                         </td>
                     </tr>
                 @endforeach

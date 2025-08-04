@@ -32,7 +32,7 @@ class CrudController extends Controller
         $crud->phone = $request->phone;
         $crud->save();
         Session::flash('msg', 'Data Successfully added');
-        return redirect('/') ;
+        return to_route('crud.index') ;
     }
     public function editData($id=null)
     {
@@ -51,14 +51,14 @@ class CrudController extends Controller
         $crud->phone = $request->phone;
         $crud->save();
         Session::flash('msg', 'Data Successfully updated');
-        return redirect('/') ;
+        return to_route('crud.index') ;
     }
     public function deleteData($id=null)
     {
         $deleteData=Crud::find($id);
         $deleteData->delete();
         Session::flash('msg', 'Data Successfully deleted');
-        return redirect('/') ;
+        return to_route('crud.index') ;
     }
 }
 

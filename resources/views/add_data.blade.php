@@ -14,9 +14,9 @@
 
 
         <div class="container">
-            <a href="{{url('/')}}" class="btn btn-primary my-3">Show Data</a>
+            <a href="{{route('crud.index')}}" class="btn btn-primary my-3">Show Data</a>
 
-            <form action="{{url('/store-data')}}" method="post">
+            <form action="{{route('crud.store')}}" method="post">
                 @csrf
                     <div class="form-group">
                         <label for="">Name</label>
