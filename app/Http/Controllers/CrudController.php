@@ -12,8 +12,8 @@ class CrudController extends Controller
     public function showData()
     {
         //$showData = crud::all();
-        //$showData = crud::paginate(5);
-        $showData = crud::simplePaginate(5);
+        $showData = crud::paginate(5);
+        //$showData = crud::simplePaginate(5);
 
 
         return view('show_data' , compact('showData'));
@@ -28,6 +28,8 @@ class CrudController extends Controller
         $crud = new Crud();
         $crud->name = $request->name;
         $crud->email = $request->email;
+        $crud->address = $request->address;
+        $crud->phone = $request->phone;
         $crud->save();
         Session::flash('msg', 'Data Successfully added');
         return redirect('/') ;
@@ -45,6 +47,8 @@ class CrudController extends Controller
         $crud = Crud::find($id);
         $crud->name = $request->name;
         $crud->email = $request->email;
+        $crud->address = $request->address;
+        $crud->phone = $request->phone;
         $crud->save();
         Session::flash('msg', 'Data Successfully updated');
         return redirect('/') ;

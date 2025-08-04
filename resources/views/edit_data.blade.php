@@ -34,6 +34,22 @@
 
                         @enderror
                     </div>
+                     <div class="form-group">
+                        <label for="">Address</label>
+                        <input type="text" class="form-control" name="address" value="{{ $editData->address }}" placeholder="Enter your address">
+                        @error('address')
+                        <span class="text-danger">{{$message}}</span>
+
+                        @enderror
+                    </div>
+                     <div class="form-group">
+                        <label for="">Phone Number</label>
+                        <input type="text" class="form-control" name="phone" value="{{ $editData->phone }}" placeholder="Enter your phone number">
+                        @error('phone')
+                        <span class="text-danger">{{$message}}</span>
+
+                        @enderror
+                    </div>
                 <input type="submit" class="btn btn-primary my-3" value="Submit">
 
             </form>

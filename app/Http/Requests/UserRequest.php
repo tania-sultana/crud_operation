@@ -24,7 +24,8 @@ class UserRequest extends FormRequest
 
         return [
             'name' => 'required|max:10',
-            'email' => 'required|email'
+            'email' => 'required|email',
+
 
 
 
@@ -37,7 +38,9 @@ class UserRequest extends FormRequest
             'name.required'=>'Enter your name',
             'name.max'=>'Your name can not contain more than 10 charecter',
             'email.required'=>'Enter your email',
-            'email.email'=>'Email must be a valid eamil'
+            'email.email'=>'Email must be a valid eamil',
+
+
 
         ];
     }

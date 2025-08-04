@@ -34,10 +34,26 @@
 
                         @enderror
                     </div>
+                     <div class="form-group">
+                        <label for="">Address</label>
+                        <input type="text" class="form-control" name="address" placeholder="Enter your address">
+                        @error('address')
+                        <span class="text-danger">{{$message}}</span>
+
+                        @enderror
+                    </div>
+                     <div class="form-group">
+                        <label for="">Phone Number</label>
+                        <input type="text" class="form-control" name="phone" placeholder="Enter your phone number">
+                        @error('phone')
+                        <span class="text-danger">{{$message}}</span>
+
+                        @enderror
+                    </div>
                 <input type="submit" class="btn btn-primary my-3" value="Submit">
 
             </form>
-            
+
         </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
